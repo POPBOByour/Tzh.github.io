@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*-------------------------- 1. 头部区域（固定+浮动） --------------------------*/
+.header {
+    position: fixed; /* 固定定位*/
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: #f89815;
+    padding: 0 20px;
+    z-index: 999;
+}
+.logo {
+    float: left;
+    line-height: 60px;
+    color: #fff;
+    font-weight: bold;
+}
+.nav {
+    float: right;
+}
+.nav ul {
+    list-style: none;
+}
+.nav ul li {
+    float: left;
+    margin-left: 20px;
+    line-height: 60px;
+}
+.nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer; /* pointer效果 */
+}
+
+/*-------------------------- 2. 主体容器浮动--------------------------*/
+.container {
+    margin-top: 70px;
+    padding: 20px;
+}
+
+/*左侧栏：相对定位*/
+.left {
+    position: relative; /*相对定位*/
+    float: left;
+    width: 20%;
+    background: #fefcf5;
+    padding: 20px;
+    border: 1px solid #e9d3be;
+}
+.left ul {
+    list-style: none;
+    margin-top: 10px;
+}
+.left ul li {
+    margin: 8px 0;
+}
+.left ul li a {
+    text-decoration: none;
+    color: #333;
+    cursor: pointer;
+}
+
+/*中间栏*/
+.center {
+    float: left;
+    width: 60%;
+    padding: 0 20px;
+}
+
+/*右侧栏：固定定位*/
+.right {
+    position: fixed; /*固定定位，右侧悬浮*/
+    top: 80px;
+    right: 20px;
+    width: 15%;
+    background: #fefcf5;
+    padding: 20px;
+    border: 1px solid #e9d3be;
+}
+
+/*-------------------------- 3. 中间栏内容样式 --------------------------*/
+/*悬停图书项（父相子绝）*/
+.hover-item {
+    position: relative; /*父元素相对定位*/
+    width: 200px;
+    height: 200px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.hover-item img {
+    width: 100%;
+    height: 100%;
+}
+.book-info {
+    position: absolute; /*子元素绝对定位*/
+    bottom: -50px; /*初始隐藏在下方*/
+    left: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.7);
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    transition: bottom 0.3s;
+}
+/*鼠标悬停显示*/
+.hover-item:hover .book-info {
+    bottom: 0;
+}
+
+/*热门推荐（浮动排列）*/
+.hot-list {
+    margin: 20px 0;
+}
+.hot-item {
+    float: left;
+    width: 45%;
+    margin-right: 5%;
+    margin-bottom: 10px;
+}
+.hot-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+/*新书上市（Table布局）*/
+.new-book table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+.new-book th, .new-book td {
+    padding: 8px;
+    text-align: center;
+}
+
+/*-------------------------- 4. 盒子模型应用 --------------------------*/
+.left, .center, .right, .hover-item, .hot-item {
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin: 10px 0; 
+}

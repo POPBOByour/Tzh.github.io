@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>图书商城</title>
+    <!--引入CSS-->
+    <link rel="stylesheet" href="CSS/lab2-2503-102-index.css">
+</head>
+<body>
+    <!--头部区域（固定+浮动布局）-->
+    <header class="header">
+        <div class="logo">图书商城LOGO</div>
+        <nav class="nav">
+            <ul>
+                <li><a href="#">首页</a></li>
+                <li><a href="#">图书分类</a></li>
+                <li><a href="#">热门推荐</a></li>
+                <li><a href="#">新书上市</a></li>
+            </ul>
+        </nav>
+        <div style="clear: both;"></div>
+    </header>
+
+    <!--主体-->
+    <div class="container">
+        <!--左侧栏：相对定位-->
+        <aside class="left">
+            <h3>图书分类</h3>
+            <ul>
+                <li><a href="#">文学小说</a></li>
+                <li><a href="#">计算机技术</a></li>
+                <li><a href="#">生活艺术</a></li>
+                <li><a href="#">少儿读物</a></li>
+            </ul>
+        </aside>
+
+        <!--中间栏-->
+        <main class="center">
+            <!--鼠标悬停效果-->
+            <div class="book-item hover-item">
+                <img src="img2/book1.png" alt="图书1">
+                <div class="book-info">
+                    <p>《新海诚时光恋人三部曲》</p>
+                    <p>￥59.9</p>
+                </div>
+            </div>
+
+            <!--浮动排列-->
+            <div class="hot-list">
+                <h3>热门推荐</h3>
+                <div class="hot-item"><img src="img2/book2.png" alt="图书2"></div>
+                <div class="hot-item"><img src="img2/book3.png" alt="图书3"></div>
+                <div style="clear: both;"></div>
+            </div>
+
+            <!--Table布局-->
+            <div class="new-book">
+                <h3>新书上市</h3>
+                <table border="1">
+                    <tr>
+                        <th>书名</th>
+                        <th>价格</th>
+                        <th>封面</th>
+                    </tr>
+                    <tr>
+                        <td>《你的名字。》</td>
+                        <td>￥79.9</td>
+                        <td><img src="img2/book4.png" width="50"></td>
+                    </tr>
+                    <tr>
+                        <td>《从月亮来的男孩》</td>
+                        <td>￥69.9</td>
+                        <td><img src="img2/book5.png" width="50"></td>
+                    </tr>
+                </table>
+            </div>
+        </main>
+
+        <!-- 右侧栏：固定定位-->
+        <aside class="right">
+            <h3>促销活动</h3>
+            <p>满100减20</p>
+            <p>全场8折</p>
+        </aside>
+        <div style="clear: both;"></div>
+    </div>
+</body>
+</html>
