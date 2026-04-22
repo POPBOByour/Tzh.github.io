@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>用户登录 - 图书商城</title>
+    <link rel="stylesheet" href="CSS/lab2-2503-102-index.css"> <style>
+        .auth-container {
+            width: 400px;
+            margin: 100px auto; /*居中*/
+            padding: 20px;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .auth-form input {
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+            box-sizing: border-box; /*盒子模型应用*/
+        }
+        .btn-submit {
+            background-color: #ff4400;
+            color: white;
+            border: none;
+            cursor: pointer; /*鼠标手型效果*/
+        }
+    </style>
+</head>
+<body>
+    <div class="auth-container">
+        <h2>用户登录</h2>
+        <form class="auth-form">
+            <input type="text" placeholder="用户名/邮箱" required>
+            <input type="password" placeholder="密码" required>
+            <div class="captcha-row">
+                <input type="text" id="user-captcha" placeholder="输入验证码" style="width: 50%;">
+                <div id="captcha-box" title="点击刷新验证码">ABCD</div>
+            </div>
+            <button type="submit" class="btn-submit">立即登录</button>
+        </form>
+        <p><a href="register.html">还没有账号？立即注册</a></p>
+        <p><a href="index.html">返回首页</a></p>
+    </div>
+</body>
+</html>
