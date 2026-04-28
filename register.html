@@ -2,34 +2,70 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>新用户注册 - 图书商城</title>
-    <link rel="stylesheet" href="CSS/lab2-2503-102-index.css">
+    <title>注册</title>
     <style>
-        /* 直接复用登录页的样式逻辑 */
-        .auth-container {
-            width: 450px;
-            margin: 50px auto;
-            padding: 30px;
-            border: 2px solid #f0f0f0;
-        }
-        .auth-form input {
-            width: 100%;
-            margin: 8px 0;
-            padding: 12px;
-        }
+        *{margin:0;padding:0;box-sizing:border-box;font-family:微软雅黑;}
+        body{background:#f4f4f4;display:flex;justify-content:center;align-items:center;height:100vh;}
+        .reg-box{width:380px;background:white;padding:30px;border-radius:12px;box-shadow:0 0 15px #ccc;}
+        h2{text-align:center;margin-bottom:20px;color:#f89815;}
+        .input-item{margin-bottom:15px;}
+        input{width:100%;height:42px;padding:0 10px;border:1px solid #ddd;border-radius:6px;outline:none;}
+        .code-box{display:flex;gap:10px;}
+        #code{flex:1;}
+        #codeImg{width:120px;height:42px;background:#f89815;color:white;text-align:center;line-height:42px;letter-spacing:6px;font-size:18px;border-radius:6px;cursor:pointer;}
+        button{width:100%;height:45px;background:#f89815;color:white;border:none;border-radius:6px;font-size:16px;margin-top:10px;cursor:pointer;transition:.3s;}
+        button:hover{transform:scale(1.03);background:#ff7d00;}
+        .to-login{text-align:center;margin-top:15px;font-size:14px;}
+        a{color:#f89815;text-decoration:none;}
     </style>
 </head>
 <body>
-    <div class="auth-container">
-        <h2>创建新账号</h2>
-        <form class="auth-form">
-            <input type="text" placeholder="设置用户名" required>
-            <input type="email" placeholder="电子邮箱" required>
-            <input type="password" placeholder="设置密码" required>
-            <input type="password" placeholder="确认密码" required>
-            <button type="submit" class="btn-submit">同意协议并注册</button>
-        </form>
-        <p><a href="login.html">已有账号？去登录</a></p>
+    <div class="reg-box">
+        <h2>用户注册</h2>
+        <div class="input-item">
+            <input type="text" id="user" placeholder="请输入用户名">
+        </div>
+        <div class="input-item">
+            <input type="password" id="pwd" placeholder="请输入密码">
+        </div>
+        <div class="input-item code-box">
+            <input type="text" id="code" placeholder="请输入验证码">
+            <div id="codeImg" onclick="createCode()"></div>
+        </div>
+        <button onclick="register()">注册</button>
+        <div class="to-login">已有账号？<a href="login.html">立即登录</a></div>
     </div>
+
+    <script>
+        var codeStr = "";
+        window.onload = createCode;
+
+        function createCode(){
+            codeStr = "";
+            var codeChars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            for(var i=0;i<4;i++){
+                codeStr += codeChars.charAt(Math.floor(Math.random()*codeChars.length));
+            }
+            document.getElementById("codeImg").innerHTML = codeStr;
+        }
+
+        function register(){
+            var user = document.getElementById("user").value;
+            var pwd = document.getElementById("pwd").value;
+            var code = document.getElementById("code").value.toUpperCase();
+
+            if(user=="" || pwd==""){
+                alert("请完善注册信息！");
+                return;
+            }
+            if(code != codeStr){
+                alert("验证码错误！");
+                createCode();
+                return;
+            }
+            alert("注册成功！请登录");
+            location.href = "login.html";
+        }
+    </script>
 </body>
 </html>

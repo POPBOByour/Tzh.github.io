@@ -1,0 +1,209 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 头部导航 */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: #f89815;
+    padding: 0 20px;
+    z-index: 999;
+}
+.logo {
+    float: left;
+    line-height: 60px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+}
+.nav {
+    float: right;
+}
+.nav ul {
+    list-style: none;
+}
+.nav ul li {
+    float: left;
+    margin-left: 20px;
+    line-height: 60px;
+}
+.nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* 图标动画：购物车、搜索悬停旋转 */
+.icon {
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    transition: transform 0.4s ease;
+}
+.cart-icon:hover,
+.search-icon:hover {
+    transform: rotate(360deg);
+}
+
+/* 从下向上无缝轮播 */
+.banner {
+    width: 100%;
+    height: 250px;
+    margin-top: 60px;
+    overflow: hidden;
+    background: #fff;
+}
+.banner-track {
+    height: 500%;
+    display: flex;
+    flex-direction: column;
+    animation: scrollY 12s linear infinite;
+}
+.banner-item {
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.banner-item img {
+    height: 200px;
+    object-fit: contain;
+    box-shadow: 0 2px 10px #ccc;
+}
+@keyframes scrollY {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-50%); }
+}
+
+/* 主体容器 */
+.container {
+    width: 1200px;
+    margin: 30px auto;
+    overflow: hidden;
+}
+
+/* 左侧分类导航 */
+.left {
+    float: left;
+    width: 20%;
+    padding: 20px;
+    background: #fefcf5;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+.left h3 {
+    margin-bottom: 10px;
+    color: #f89815;
+}
+.left ul {
+    list-style: none;
+}
+.left li {
+    margin: 6px 0;
+}
+.left li a {
+    color: #333;
+    text-decoration: none;
+}
+
+/* 中间内容区 */
+.center {
+    float: left;
+    width: 60%;
+    padding: 0 20px;
+}
+.category {
+    margin-bottom: 40px;
+}
+.category h2 {
+    color: #f89815;
+    margin-bottom: 20px;
+    border-left: 4px solid #f89815;
+    padding-left: 10px;
+}
+.book-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* 热门图书动效：悬停右移、放大、阴影加深 */
+.book-card {
+    width: 200px;
+    height: 300px;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
+.book-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: contain;
+    display: block;
+    background: #fff;
+}
+.book-info {
+    padding: 12px;
+    text-align: center;
+}
+.book-name {
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+.price {
+    color: #f89815;
+    font-weight: bold;
+}
+/* 核心动效 */
+.book-card:hover {
+    transform: translateX(10px) scale(1.08);
+    box-shadow: 0 10px 24px rgba(0,0,0,0.2);
+}
+
+/* 右侧栏 */
+.right {
+    float: right;
+    width: 18%;
+    padding: 20px;
+    background: #fefcf5;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+.right h3 {
+    margin-bottom: 10px;
+    color: #f89815;
+}
+
+/* 按钮动画：背景渐变+缩放 */
+.btn {
+    width: 100%;
+    height: 42px;
+    background: #f89815;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.btn:hover {
+    background: linear-gradient(90deg, #f89815, #ff6b00);
+    transform: scale(1.08);
+    box-shadow: 0 4px 12px rgba(255,107,0,0.3);
+}
+.nav ul li a:hover {
+    background: #fff !important;
+    color: #f89815 !important;
+    padding: 10px 14px;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}

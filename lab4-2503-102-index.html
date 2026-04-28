@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>实验四 - 图书商城</title>
+    <link rel="stylesheet" href="CSS/lab4-2503-102-index.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">图书商城</div>
+        <nav class="nav">
+            <ul>
+                <li class="icon cart-icon">🛒</li>
+                <li class="icon search-icon">🔍</li>
+                <li><a href="login.html">登录</a></li>
+                <li><a href="register.html">注册</a></li>
+                <li><a href="#banner">首页</a></li>
+                <li><a href="#wenxue">文学小说</a></li>
+                <li><a href="#jisuanji">计算机</a></li>
+                <li><a href="#shaoer">少儿读物</a></li>
+                <li><a href="#shenghuo">生活艺术</a></li>
+            </ul>
+        </nav>
+        <div style="clear:both"></div>
+    </header>
+
+    <!-- 从下向上无缝轮播 -->
+    <div class="banner" id="banner">
+        <div class="banner-track">
+            <div class="banner-item"><img src="img3/book1.png" alt="图书"></div>
+            <div class="banner-item"><img src="img3/book2.png" alt="图书"></div>
+            <div class="banner-item"><img src="img3/book3.png" alt="图书"></div>
+            <div class="banner-item"><img src="img3/book4.png" alt="图书"></div>
+            <div class="banner-item"><img src="img3/book5.png" alt="图书"></div>
+            <!-- 无缝循环：重复一次图片 -->
+            <div class="banner-item"><img src="img3/book1.png" alt="图书"></div>
+            <div class="banner-item"><img src="img3/book2.png" alt="图书"></div>
+            <div class="banner-item"><img src="img3/book3.png" alt="图书"></div>
+            <div class="banner-item"><img src="img3/book4.png" alt="图书"></div>
+            <div class="banner-item"><img src="img3/book5.png" alt="图书"></div>
+        </div>
+    </div>
+
+    <div class="container">
+        <aside class="left">
+            <h3>图书分类</h3>
+            <ul>
+                <li><a href="#wenxue">文学小说</a></li>
+                <li><a href="#jisuanji">计算机</a></li>
+                <li><a href="#shaoer">少儿读物</a></li>
+                <li><a href="#shenghuo">生活艺术</a></li>
+            </ul>
+        </aside>
+
+        <main class="center">
+            <!-- 文学小说 -->
+            <div class="category" id="wenxue">
+                <h2>📚 文学小说</h2>
+                <div class="book-list">
+                    <div class="book-card">
+                        <a href="https://book.douban.com/subject/1007337/" target="_blank">
+                            <img src="img3/文学作品_1.png" alt="红楼梦">
+                        </a>
+                        <div class="book-info">
+                            <p class="book-name">红楼梦</p>
+                            <p class="price">¥59.90</p>
+                        </div>
+                    </div>
+                    <div class="book-card">
+                        <a href="https://book.douban.com/subject/1008714/" target="_blank">
+                            <img src="img3/文学作品_2.png" alt="儒林外史">
+                        </a>
+                        <div class="book-info">
+                            <p class="book-name">儒林外史</p>
+                            <p class="price">¥39.90</p>
+                        </div>
+                    </div>
+                    <div class="book-card">
+                        <a href="#" target="_blank">
+                            <img src="img3/文学作品_3.png" alt="新海诚作品集">
+                        </a>
+                        <div class="book-info">
+                            <p class="book-name">新海诚作品集</p>
+                            <p class="price">¥69.90</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 计算机 -->
+            <div class="category" id="jisuanji">
+                <h2>💻 计算机</h2>
+                <div class="book-list">
+                    <div class="book-card">
+                        <a href="https://book.douban.com/subject/35236027/" target="_blank">
+                            <img src="img3/计算机_1.png" alt="深入解析C#">
+                        </a>
+                        <div class="book-info">
+                            <p class="book-name">深入解析C#</p>
+                            <p class="price">¥89.00</p>
+                        </div>
+                    </div>
+                    <div class="book-card">
+                        <a href="https://book.douban.com/subject/35236028/" target="_blank">
+                            <img src="img3/计算机_2.png" alt="大学计算机基础">
+                        </a>
+                        <div class="book-info">
+                            <p class="book-name">大学计算机基础</p>
+                            <p class="price">¥35.00</p>
+                        </div>
+                    </div>
+                    <div class="book-card">
+                        <a href="https://book.douban.com/subject/5309561/" target="_blank">
+                            <img src="img3/计算机_3.png" alt="深入理解计算机系统">
+                        </a>
+                        <div class="book-info">
+                            <p class="book-name">深入理解计算机系统</p>
+                            <p class="price">¥139.00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 少儿读物 -->
+            <div class="category" id="shaoer">
+                <h2>👧 少儿读物</h2>
+                <div class="book-list">
+                    <div class="book-card">
+                        <a href="https://book.douban.com/subject/25861862/" target="_blank">
+                            <img src="img3/少儿读物_1.png" alt="小红帽">
+                        </a>
+                        <div class="book-info">
+                            <p class="book-name">小红帽</p>
+                            <p class="price">¥19.90</p>
+                        </div>
+                    </div>
+                    <div class="book-card">
+                        <a href="https://book.douban.com/subject/30221178/" target="_blank">
+                            <img src="img3/少儿读物_2.png" alt="少儿百科全书">
+                        </a>
+                        <div class="book-info">
+                            <p class="book-name">少儿百科全书</p>
+                            <p class="price">¥59.90</p>
+                        </div>
+                    </div>
+                    <div class="book-card">
+                        <a href="#" target="_blank">
+                            <img src="img3/少儿读物_3.png" alt="趣味故事集">
+                        </a>
+                        <div class="book-info">
+                            <p class="book-name">趣味故事集</p>
+                            <p class="price">¥29.90</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 生活艺术 -->
+            <div class="category" id="shenghuo">
+                <h2>🎨 生活艺术</h2>
+                <div class="book-list">
+                    <div class="book-card">
+                        <a href="https://book.douban.com/subject/35313233/" target="_blank">
+                            <img src="img3/生活艺术_1.png" alt="艺术改变你的生活">
+                        </a>
+                        <div class="book-info">
+                            <p class="book-name">艺术改变你的生活</p>
+                            <p class="price">¥49.90</p>
+                        </div>
+                    </div>
+                    <div class="book-card">
+                        <a href="https://book.douban.com/subject/30221179/" target="_blank">
+                            <img src="img3/生活艺术_2.png" alt="生活的艺术">
+                        </a>
+                        <div class="book-info">
+                            <p class="book-name">生活的艺术</p>
+                            <p class="price">¥39.90</p>
+                        </div>
+                    </div>
+                    <div class="book-card">
+                        <a href="#" target="_blank">
+                            <img src="img3/生活艺术_3.png" alt="生活美学指南">
+                        </a>
+                        <div class="book-info">
+                            <p class="book-name">生活美学指南</p>
+                            <p class="price">¥45.90</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <aside class="right">
+            <h3>促销活动</h3>
+            <p>满100减20</p>
+            <button class="btn" onclick="location.href='login.html'">立即登录</button>
+        </aside>
+        <div style="clear:both"></div>
+    </div>
+</body>
+</html>
